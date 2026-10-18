@@ -352,6 +352,8 @@ body{background:var(--pbg);color:var(--pink);font-family:Inter,system-ui,sans-se
       <div class="row"><svg class="ic" viewBox="0 0 24 24" style="color: var(--accentText)" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><strong>7 € pour Alice</strong></div>
       <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Objectif atteint"><i style="width: 3%"></i></div>
       <div class="sm">Cagnotte : 7 € sur un objectif de 10 000 €</div>
+      <div class="line" style="padding: 10px 0 0"><span class="sm">Reversé à Alice (70 % de la commission)</span><strong>7 €</strong></div>
+      <div class="line" style="padding: 10px 0 0"><span class="sm">Part Solisport (30 % de la commission)</span><span>3 €</span></div>
     </div>
     <div class="pr r"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Reversement programmé</div>
   </div>
@@ -586,6 +588,8 @@ body{background:var(--pbg);color:var(--pink);font-family:Inter,system-ui,sans-se
       <div class="row"><svg class="ic" viewBox="0 0 24 24" style="color: var(--accent)" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><strong>7 € pour Alice</strong></div>
       <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Objectif atteint"><i style="width: 3%"></i></div>
       <div class="sm">Cagnotte : 7 € sur un objectif de 10 000 €</div>
+      <div class="line" style="padding: 10px 0 0"><span class="sm">Reversé à Alice (70 % de la commission)</span><strong>7 €</strong></div>
+      <div class="line" style="padding: 10px 0 0"><span class="sm">Part Solisport (30 % de la commission)</span><span>3 €</span></div>
     </div>
     <div class="pr r"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Reversement programmé</div>
   </div>
@@ -690,7 +694,7 @@ function onEnter(i){
     var pr=s.querySelector('.pr.o'),tn=pr&&textNodes(pr).pop();
     if(tn)count(function(v){tn.data=v+' points disponibles'},0,100,0,'',1100);
     var st=s.querySelector('strong');var sn=st&&textNodes(st)[0];
-    if(sn){var rest=orig.get(sn)||sn.data;if(!orig.has(sn))orig.set(sn,sn.data);var cr=ATH[chosen];var tail=' € pour '+cr.first;count(function(v){sn.data=v+tail},0,10.5,2,'',1100)}
+    if(sn){var rest=orig.get(sn)||sn.data;if(!orig.has(sn))orig.set(sn,sn.data);var cr=ATH[chosen];var tail=' € pour '+cr.first;count(function(v){sn.data=v+tail},0,7,0,'',1100)}
     var bar=s.querySelector('.progress i');if(bar){var w=bar.style.width;bar.style.transition='none';bar.style.width='0';void bar.offsetWidth;bar.style.transition='';bar.style.width=w}
     confetti(s);
   }
